@@ -139,12 +139,10 @@ def test_daily_min_python_list():
             )
         ),
     ])
-
-def test_daily_mean(test_input, expected_output):
-    """Test mean function works for array of zeroes and positive integers."""
-    from catchment.models import daily_mean
-    pdt.assert_frame_equal(daily_mean(test_input), expected_output)
-
+def test_daily_max(test_input, expected_output):
+    """Test max function works for array of zeroes and positive integers."""
+    from catchment.models import daily_max
+    pdt.assert_frame_equal(daily_max(test_input), expected_output)
 @pytest.mark.parametrize(
     "test_input, expected_output",
     [
@@ -191,8 +189,7 @@ def test_daily_mean(test_input, expected_output):
             )
         ),
     ])
-
-def test_daily_max(test_input, expected_output):
-    """Test max function works for array of zeroes and positive integers."""
-    from catchment.models import daily_max
-    pdt.assert_frame_equal(daily_max(test_input), expected_output)
+def test_daily_min(test_input, expected_output):
+    """Test min function works for array of zeroes and positive integers."""
+    from catchment.models import daily_min
+    pdt.assert_frame_equal(daily_min(test_input), expected_output)
